@@ -3,9 +3,10 @@ node-mango
 
 simple mongodb wrapper library for nodejs
 
-**UNDER CONSTRUCTION**
+Features
+--------
 
-* promise-returning wrapper methods for all mongodb ```collection```` methods.
+* promise-returning wrapper methods for all mongodb collection methods.
 * DAO-like methods: createNew/load/store/destroy/all
 * embedded fields helper methods: getField/setField/removeField/loadField/...
 * embedded array fields helper methods: addElement/addElements/removeElement/removeElements/hasElemnt/hasSomeElements/hasAllElements
@@ -95,6 +96,17 @@ API Reference
 
 **TBW**
 
-plz, see source code in ```libs``` directory and test code in ```tests``` directory before documents are available ;).
+Dependencies
+------------
+
+* [node-mongodb-native](https://github.com/mongodb/node-mongodb-native)
+* [underscore](http://underscorejs.org)
+* [q](http://documentup.com/kriskowal/q/)
+* and optional and test dependencies...
+
+Notes
+-----
+
+plz, see source code in ```libs``` directory and test code in ```tests``` directory until documents are available ;).
 
 *May the source be with you...*
