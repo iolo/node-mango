@@ -1,6 +1,6 @@
 {
   "name": "mango",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "simple mongodb wrapper library for nodejs",
   "author": "Dongsu Jang <iolothebard@gmail.com>",
   "repository": {
@@ -16,12 +16,17 @@
     "q": "~0.9.2",
     "mongodb": "~1.2.14"
   },
+  "optionalDependencies": {
+    "noredis": "~0.0.10",
+    "redis": "~0.8.3"
+  },
   "devDependencies": {
     "nodeunit": "*",
     "pow-mongodb-fixtures": "~0.8.1",
     "grunt": "~0.4.1",
     "grunt-contrib-jshint": "*",
-    "grunt-contrib-nodeunit": "*"
+    "grunt-contrib-nodeunit": "*",
+    "grunt-jsdoc": "~0.3.2"
   },
   "directories": {
     "lib": "./lib"

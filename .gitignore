@@ -2,3 +2,4 @@ node_modules
 .DS_Store
 .idea
 noredis-storage.json
+docs

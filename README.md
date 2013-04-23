@@ -46,28 +46,27 @@ var config = {
 };
 ```
 
-load configuration from file:
-
-```javascript
-var config = require('../config.json');
-```
-
-configure without cache:
+configure mango with configuration:
 
 ```javascript
 var mango = require('mango').configure(config);
 ```
 
-configure with cache:
+or, configure it later, if you want:
 
 ```javascript
-var mango = require('mango').configure(config, new mango.RedisCache(require('redis').createRedisClient()));
+var mango = require('mango');
+...
+mango.configure('mongodb://localhost/test');
 ```
 
-configure single db connection with default configuration:
+alternatively, connect directly if you need a single db connection:
 
 ```javascript
-var mango = require('mango').configure('mongodb://localhost/test');
+var mango = require('mango');
+mango.connect('mongodb://localhost/test').then(function(testDb) {
+  ... // NOTE: testDb is not mongodb.Db instance but mango.MangoDb instance
+}).done();
 ```
 
 execute queries using promise:
@@ -94,7 +93,17 @@ Cache
 API Reference
 -------------
 
-**TBW**
+to generate api reference:
+
+```
+grunt jsdoc
+```
+
+to browse api reference:
+
+```
+open docs/index.html
+```
 
 Dependencies
 ------------

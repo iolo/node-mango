@@ -15,13 +15,24 @@ module.exports = {
       if (err) throw err;
       fixturesLoader.client.close();
 
-      var cache = process.env['MANGO_CACHE'] && (new mango.MemoryCache());
-      mango.configure('mongodb://localhost/test', cache);
-
-      setTimeout(function () {
+      var cache = process.env['MANGO_CACHE'] && new mango.MemoryCache();
+      var config = {
+        test: {
+          mongo: {
+            url: 'mongodb://localhost/test'
+          },
+          mango: {
+            collections: {
+              testdocs: {},
+              testusers: {}
+            }
+          }
+        }
+      };
+      mango.configure(config, cache, function () {
         testdocs = mango.test.testdocs;
         callback();
-      }, 100);
+      });
     });
   },
   tearDown: function (callback) {
