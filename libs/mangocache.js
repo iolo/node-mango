@@ -2,7 +2,7 @@
 
 var
   Q = require('q'),
-  DEBUG = !!process.env['MONGODAO_DEBUG'];
+  DEBUG = !!process.env['MANGO_DEBUG'];
 
 /**
  * **dummy** mango cache.
